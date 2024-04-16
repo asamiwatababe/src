@@ -22,5 +22,15 @@ document.querySelector('button').addEventListener('click', () => {
 });
 }
 
+// フォーム部品の値にアクセスする方法
+// inputの中に値を入力するとアラートで表示
+document.querySelector('button').addEventListener('click', () => {
+    alert(document.querySelector('input').value);
+    alert(document.querySelector('textarea').value)
+    // テキストエリアの中を空にする
+    document.querySelectorAll('textarea').value = '';
+});
+// Input,textareaの値にはvalueを使う
+
 
 
