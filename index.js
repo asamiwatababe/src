@@ -32,5 +32,7 @@ document.querySelector('button').addEventListener('click', () => {
 });
 // Input,textareaの値にはvalueを使う
 
-
-
+// optionタグの中の選択した値がアラートで表示
+document.querySelector('button'),addEventListener('click',()=>{
+    alert(document.querySelector('select').value);
+});
