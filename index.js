@@ -7,9 +7,20 @@
 //     console.log(double(10));
 //     console.log(double(4) * 3):
 // }
-
+{
 document.querySelector('button').addEventListener('click', () => {
     const liElement = document.createElement('li');
-    liElement.textContent = 'hanako';
-    document.
-})
+    liElement.textContent = 'Hanako';
+    // document.querySelector('ul').appendChild(liElement);
+    // okをクリックしたらjiroの前にhanako 
+    document.querySelector('ul').insertBefore(liElement,
+    document.querySelector('#second'));
+    // ボタンをクリックしたらjiroを削除
+    if(confirm('sure?') === true){
+    document.querySelector('#second').remove();
+    }
+});
+}
+
+
+
