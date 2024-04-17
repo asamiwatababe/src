@@ -61,3 +61,13 @@
         alert(colors.join(','));
     })
 }
+
+// inputイベント inputに入力するとpタグにその値を反映
+// イベント指定→ text,textarea,input,select => input
+//             radio,checkbox => changeを使う
+document.querySelector('input').addEventListener('input', () => {
+    const p = document.querySelector('p');
+    const inputText = document.querySelector('input');
+    // inputText.valueだと文字列を反映し、inputText.value.lengthは文字数を反映
+    p.textContent = inputText.value.length;
+})
