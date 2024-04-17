@@ -100,9 +100,41 @@
 // 入力された値をpに反映
 // formは送信したデータを処理→別のページに移動
 // ページを指定しないとページに再読み込みがされるから値が一瞬で消えてしまう。その解決がe.preventDefaultを使う。enterでもsubmitイベントを発火させられるように
+// {
+//     document.querySelector('form').addEventListener('submit',(e) => {
+//         e.preventDefault();
+//         document.querySelector('p').textContent = document.querySelector('input').value;
+//     });
+// }
+
 {
-    document.querySelector('form').addEventListener('submit',(e) => {
-        e.preventDefault();
-        document.querySelector('p').textContent = document.querySelector('input').value;
-    });
+    // promptは文字列を反映させるためnを数値に変換
+    // const n = Number(prompt(`number?`));
+    // console.log(n + 5);
+
+    // 分数を入れたらそれが何時間何分か教えてくれる
+    // const n = Number(prompt(`time?`));
+    // console.log(`Hours: ${Math.floor(n/60)}`);//一時間６０分だから６０で割る
+    // console.log(`Minute: ${n % 60}`);//分は６０で割った余りだから％を使う
+
+    // 日本円を入れたらドルにする 小数点以下２桁まで(toFixed(2);)
+    // const n = Number(prompt(`yen?`));
+    // const amount = (n / 138.91).toFixed(2);
+    // // 3桁ごとに、をつける
+    // // console.log(`usd: ${amount}`);
+    // console.log(`USD: ${Number(amount).toLocaleString()}`);
+}
+
+// 指定した行数だけ何らかのデータを反映
+{
+    const n = Number(prompt('count?'));
+    for (let i = 0; i < n; i++) {
+        // iを3で割ったときのあまりが0だったら
+        if (i % 3 === 0) {
+            console.log(`item ${i}---`);
+        } else {
+            console.log(`item ${i}===`);
+        }
+
+    }
 }
