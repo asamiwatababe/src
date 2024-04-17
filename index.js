@@ -24,40 +24,40 @@
 
 // フォーム部品の値にアクセスする方法
 // inputの中に値を入力するとアラートで表示
-document.querySelector('button').addEventListener('click', () => {
-    alert(document.querySelector('input').value);
-    alert(document.querySelector('textarea').value)
-    // テキストエリアの中を空にする
-    document.querySelectorAll('textarea').value = '';
-});
+// document.querySelector('button').addEventListener('click', () => {
+//     alert(document.querySelector('input').value);
+//     alert(document.querySelector('textarea').value)
+//     // テキストエリアの中を空にする
+//     document.querySelectorAll('textarea').value = '';
+// });
 // Input,textareaの値にはvalueを使う
 
 // optionタグの中の選択した値がアラートで表示
-document.querySelector('button'), addEventListener('click', () => {
-    alert(document.querySelector('select').value);
-});
+// document.querySelector('button'), addEventListener('click', () => {
+//     alert(document.querySelector('select').value);
+// });
 
 // radioボタンの使い方
-{
-    document.querySelector('button').addEventListener('click', () => {
-        document.querySelectorAll('input').forEach(() => {
-            if (radio.checked === ture) {
-                alert(radio.value);
-            }
-        });
-    });
-}
+// {
+//     document.querySelector('button').addEventListener('click', () => {
+//         document.querySelectorAll('input').forEach(() => {
+//             if (radio.checked === true) {
+//                 alert(radio.value);
+//             }
+//         });
+//     });
+// }
 
 // checkboxの値にアクセス
 // 選択されたものを一括で表示
-document.querySelector('button').addEventListener('click', () => {
-    const colors = [];
-    document.querySelectorAll('input').forEach((checkbox) => {
-        if (checkbox.checked) {
-            // 空のcolorsの中にpushで値を追加していく
-            colors.push(checkbox.value)
-                // 配列を文字列にするにはjoinを使う
-                alert(colors.join(','));
-        }
-    });
-});
+{
+    document.querySelector('button').addEventListener('click',() => {
+        const colors = [];
+        document.querySelectorAll('input').forEach((checkbox) => {
+            if(checkbox.checked === true){
+                colors.push(checkbox.value);
+            }
+        });
+        alert(colors.join(','));
+    })
+}
