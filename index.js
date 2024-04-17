@@ -36,3 +36,14 @@ document.querySelector('button').addEventListener('click', () => {
 document.querySelector('button'),addEventListener('click',()=>{
     alert(document.querySelector('select').value);
 });
+
+// radioボタンの使い方
+{
+    document.querySelector('button').addEventListener('click',() => {
+        document.querySelectorAll('input').forEach(() => {
+            if (radio.checked === true){
+                alert(radio.value);
+            }
+        })
+    });
+}
