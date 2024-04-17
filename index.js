@@ -97,3 +97,12 @@
 //     document.querySelector('p').textContent = `X:${e.clientX} Y:${e.clientY}`
 // });
 
+// 入力された値をpに反映
+// formは送信したデータを処理→別のページに移動
+// ページを指定しないとページに再読み込みがされるから値が一瞬で消えてしまう。その解決がe.preventDefaultを使う。enterでもsubmitイベントを発火させられるように
+{
+    document.querySelector('form').addEventListener('submit',(e) => {
+        e.preventDefault();
+        document.querySelector('p').textContent = document.querySelector('input').value;
+    });
+}
