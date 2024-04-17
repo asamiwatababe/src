@@ -73,14 +73,27 @@
 // });
 
 // focus,blurイベント フォーカスされたときpタグにヒントが表示される
-{
-    document.querySelector('input').addEventListener('focus', () => {
-        document.querySelector('p').textContent = 'English only!';
-    });
-    // focusが外れる時のイベント処理 空文字にする
-    document.querySelector('input').addEventListener('blur', () => {
-        document.querySelector('p').textContent = '';
-    });
+// {
+//     document.querySelector('input').addEventListener('focus', () => {
+//         document.querySelector('p').textContent = 'English only!';
+//     });
+//     // focusが外れる時のイベント処理 空文字にする
+//     document.querySelector('input').addEventListener('blur', () => {
+//         document.querySelector('p').textContent = '';
+//     });
+//     // focusが最初から当たっているように
+//     document.querySelector('input').focus();
+// }
 
-    document.querySelector('input').focus();
-}
+// {
+//     // キーが押されたときのイベント キーで操作するゲームなどを作ることができる
+//     document.addEventListener('keydown', (e) => {
+//         document.querySelector('p').textContent = e.key;
+//     });
+// }
+
+//マウスイベント マウスを動かしたらｘ座標が画面に表示される
+// document.addEventListener('mousemove', (e) => {
+//     document.querySelector('p').textContent = `X:${e.clientX} Y:${e.clientY}`
+// });
+
